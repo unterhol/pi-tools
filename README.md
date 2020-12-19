@@ -6,7 +6,7 @@ Our Raspberry Pi Repository
 
 ```
 sudo apt update
-sudo api install git
+sudo apt install git
 
 sudo config --global user.name "Your Name"
 sudo config --global user.email "youremail@youdomain.com"
