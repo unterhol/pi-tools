@@ -1,6 +1,6 @@
 var http      = require('http');
 var express   = require('express');
-var gpio      = require('pi-gpio');
+var gpio      = require('rpi-gpio');
 
 var app       = express();
 
@@ -14,12 +14,8 @@ var inputs = [    { pin: '16', gpio: '23', value: null },
 var i;
 for (i in inputs) {
   console.log('opening GPIO port ' + inputs[i].gpio + ' on pin ' + inputs[i].pin + ' as input');
-  gpio.open(inputs[i].pin, "input", function (err) {
-    if (err) {
-      throw err;
-    }
-  }); // gpio.open
-} // if
+  gpio.setup(inputs[i].pin, gpio.DIR_OUT)
+} 
 
 // ------------------------------------------------------------------------
 // read and store the GPIO inputs twice a second
