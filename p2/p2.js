@@ -1,6 +1,6 @@
 var http = require('http');
 var express = require('express');
-var wpi = require('pi-gpio');
+var gpio = require('pi-gpio');
 
 var app = express();
 
@@ -16,17 +16,17 @@ for (i in inputs) {
     });
 }
 
-// setInterval( function () {
-//     // read GPIO input port
-//     gpio.read(inputs[0].pin, function (err, value) {
-//     if (err) {
-//     throw err;
-//     }
-//     console.log('read pin ' + inputs[0].pin + ' value = ' + value);
-//     // update the inputs object
-//     inputs[0].value = value.toString(); // store value as a string
-//     });
-// }
+setInterval( function () {
+    // read GPIO input port
+    gpio.read(inputs[0].pin, function (err, value) {
+    if (err) {
+    throw err;
+    }
+    console.log('read pin ' + inputs[0].pin + ' value = ' + value);
+    // update the inputs object
+    inputs[0].value = value.toString(); // store value as a string
+    });
+});
 
 app.use(express['static'](__dirname));
 
