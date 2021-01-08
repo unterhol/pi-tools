@@ -5,8 +5,8 @@ var gpio      = require('rpi-gpio');
 var app       = express();
 
 // input port objects for our example
-var inputs = [    { pin: '16', gpio: '23', value: null },
-                  { pin: '22', gpio: '25', value: null }
+var inputs = [    { pin: '28', gpio: '28', value: null },
+                  { pin: '29', gpio: '29', value: null }
                 ];
 
 // -----------------------------------------------------------------------
@@ -89,7 +89,7 @@ process.on('SIGINT', function() {
 
   console.log("closing GPIO...");
   for (i in inputs) {
-    gpio.close(inputs[i].pin);
+    gpio.destroy(inputs[i].pin);
   }
   process.exit();
 });

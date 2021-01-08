@@ -1,7 +1,7 @@
 window.onload = function () {
     var url,
       i,
-      ports = [23, 25];  // the GPIO ports we will read
+      ports = [28, 29];  // the GPIO ports we will read
   
     for (i in ports) {
       $('#input_' + ports[i]).html('loading port ' + ports[i] + ' value...');
@@ -17,7 +17,7 @@ window.onload = function () {
           $('#input_' + data.gpio).html('GPIO input port ' + data.gpio + ' value is ' + data.value);
         });
       } // for 
-    }, 1000); // setInterval
+    }, 3000); // setInterval
     
   }; //onload
   

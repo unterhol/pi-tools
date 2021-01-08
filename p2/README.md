@@ -10,3 +10,7 @@
 	npm install connect --save
 	npm install pi-gpio
 ```
+
+## Reading
+
+https://gpiozero.readthedocs.io/en/stable/remote_gpio.html
