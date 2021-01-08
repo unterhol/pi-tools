@@ -5,8 +5,8 @@ var gpio      = require('rpi-gpio');
 var app       = express();
 
 // input port objects for our example
-var inputs = [    { pin: '28', gpio: '28', value: null },
-                  { pin: '29', gpio: '29', value: null }
+var inputs = [    { pin: '38', gpio: '28', value: null },
+                  { pin: '40', gpio: '29', value: null }
                 ];
 
 // -----------------------------------------------------------------------
