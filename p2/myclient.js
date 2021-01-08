@@ -4,7 +4,7 @@ window.onload = function () {
       ports = [28, 29];  // the GPIO ports we will read
   
     for (i in ports) {
-      $('#input_' + ports[i]).html('loading port ' + ports[i] + ' value...');
+      $('#input_' + ports[i]).html('loading GPIO ' + ports[i] + ' value...');
     }
   
     setInterval( function () {

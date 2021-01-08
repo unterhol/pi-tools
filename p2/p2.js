@@ -24,7 +24,7 @@ setInterval( function () {
     if (err) {
       throw err;
     }
-    console.log('read pin ' + inputs[0].pin + ' value = ' + value);
+    console.log('read GPIO ' + inputs[0].gpio + ' value = ' + value);
     // update the inputs object
     inputs[0].value = value.toString(); // store value as a string
   });
@@ -33,7 +33,7 @@ setInterval( function () {
     if (err) {
       throw err;
     }
-    console.log('read pin ' + inputs[1].pin + ' value = ' + value);
+    console.log('read GPIO ' + inputs[1].gpio + ' value = ' + value);
     inputs[1].value = value.toString();
   });
 }, 500); // setInterval
